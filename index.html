@@ -218,7 +218,18 @@
     });
 
     // --- initialization (requires learner to replace YOUR_API_KEY_HERE in the script tag URLs above) ---
-    amplitude.init('908235321c62cc725c16c703afcb82e7');
+    amplitude.init('908235321c62cc725c16c703afcb82e7', null, {
+      autocapture: {
+        attribution: true,
+        pageViews: true,
+        sessions: true,
+        formInteractions: true,
+        fileDownloads: true,
+        elementInteractions: true,
+        pageUrlEnrichment: true,
+        webVitals: true,
+      },
+    });
 
     // Example: Page Loaded
     amplitude.track('Page Loaded', {
